@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import gifts from './gifts';
 
 class GiftList extends Component {
@@ -11,7 +10,9 @@ class GiftList extends Component {
     const giftList = gifts.map(gift => (
       <div>
         <h1>{gift.person}</h1>
-        <button onClick={() => this.handleClick(gift.giftlink)} />
+        <button onClick={() => this.handleClick(gift.giftlink)}>
+          Click for URL
+        </button>
       </div>
   ))
     return giftList;
